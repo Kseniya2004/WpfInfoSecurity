@@ -44,6 +44,8 @@ namespace WpfInfoSecurity.Pages
 
             TxtOrganizer.Text = gender + " " + organizers.Fio.Split(' ')[1];
             TxtGetting.Text = time;
+            
+            ImOrganizers.Source = new BitmapImage(new Uri("/Assets/Organizers/" + organizers.Photo, UriKind.RelativeOrAbsolute)); ;
         }
 
         private void BtnProfile_Click(object sender, RoutedEventArgs e)

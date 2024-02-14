@@ -28,9 +28,14 @@
         <StackPanel Orientation="Vertical"
             Grid.Row="2"
             Grid.Column="0">
-            <Image Source="/Assets/Authorization.png" 
-           Width="150"
-           Height="200"/>
+            <Border BorderThickness="1" Background="AliceBlue">
+                <Image Name="ImOrganizers"
+                   Width="150"
+                   Height="200"
+                   >
+                </Image>
+            </Border>
+            
             <Button Content="Мой профиль" Name="BtnProfile"
             Style="{StaticResource RoundButton}"
             Click="BtnProfile_Click"
