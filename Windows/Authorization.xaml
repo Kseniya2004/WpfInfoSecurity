@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfInfoSecurity.Windows.Authorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfInfoSecurity.Windows"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Авторизация" FontSize="24" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" 
+                    Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock Text="Логин:" Width="50"
+                           HorizontalAlignment="Center"/>
+                <TextBox Name="TxbLogin"
+                    Width="100" Height="30" Margin="5 0"/>                
+            </StackPanel>
+           
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock Text="Пароль:" Width="50"
+                           VerticalAlignment="Center"/>
+                <PasswordBox Name="PsbPassword"
+                    Width="100" Height="30" Margin="5 0"/>
+            </StackPanel>
+            
+            <TextBlock Text="Captcha:"
+                       HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal"
+                        Margin="5">
+                <TextBlock Text="ABCD" Name="TxtCaptcha"
+                           FontFamily="Lucida Handwriting"
+                           Foreground="Magenta"
+                           Background="LightGray"
+                           Padding="5"
+                           VerticalAlignment="Center">
+                    <TextBlock.Effect>
+                        <BlurEffect Radius="2"></BlurEffect>
+                    </TextBlock.Effect>
+                </TextBlock>
+                <TextBox Name="TxbCaptcha" 
+                         Width="100" Height="30" Margin="5 0"/>
+            </StackPanel>
+            
+            <Button Content="Войти" Margin="0 15 0 0"
+                    Width="100" Height="30"
+                    Name="BtnEnter"
+                    Click="BtnEnter_Click"/>
+            <Button Content="Назад" Margin="0 5 0 0"
+                    Width="100" Height="30"
+                    Name="BtnBack"
+                    Click="BtnBack_Click"/>   
+        </StackPanel>
+        
+    </Grid>
+</Window>

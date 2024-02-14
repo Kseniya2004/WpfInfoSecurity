@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5a2f29902a2f4c98a82237b0d2d73fd4" Name="Diagram1">
+        <EntityTypeShape EntityType="InfoSecurityModel.Activities" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Cities" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Country" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Directions" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Events" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Gender" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Juries" Width="1.5" PointX="10.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Members" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Moderators" Width="1.5" PointX="7.5" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.Organizers" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="InfoSecurityModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Events1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Juries" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Juries1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Juries2" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Juries3" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Juries4" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Members1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Activities_Moderators1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Cities_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Events_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Juries_Country1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Members_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Moderators_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Organizers_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Events_Directions" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Juries_Directions1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Moderators_Directions" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Juries_Events1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Moderators_Events" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Juries_Gender1" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Members_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Moderators_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="InfoSecurityModel.FK_Organizers_Gender" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
