@@ -70,8 +70,14 @@
     <Compile Include="Pages\PageJuries.xaml.cs">
       <DependentUpon>PageJuries.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\PageJuriesList.xaml.cs">
+      <DependentUpon>PageJuriesList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageMembers.xaml.cs">
       <DependentUpon>PageMembers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageMembersList.xaml.cs">
+      <DependentUpon>PageMembersList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageOrganizer.xaml.cs">
       <DependentUpon>PageOrganizer.xaml</DependentUpon>
@@ -151,7 +157,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PageJuriesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageMembers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageMembersList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

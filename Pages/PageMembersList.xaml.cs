@@ -17,19 +17,19 @@ using WpfInfoSecurity.Classes;
 namespace WpfInfoSecurity.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageMembers.xaml
+    /// Логика взаимодействия для PageMembersList.xaml
     /// </summary>
-    public partial class PageMembers : Page
+    public partial class PageMembersList : Page
     {
-        public PageMembers()
+        public PageMembersList()
         {
             InitializeComponent();
-            DgMembers.ItemsSource = InfoSecurityEntities.GetContext().Members.ToList();
+            LViewMembers.ItemsSource = InfoSecurityEntities.GetContext().Members.ToList();
         }
 
-        private void MIList_Click(object sender, RoutedEventArgs e)
+        private void MIGrid_Click(object sender, RoutedEventArgs e)
         {
-            ConnectHelper.frame.Navigate(new PageMembersList());
+            ConnectHelper.frame.Navigate(new PageMembers());
         }
     }
 }

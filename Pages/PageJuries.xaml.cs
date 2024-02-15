@@ -26,5 +26,15 @@ namespace WpfInfoSecurity.Pages
             InitializeComponent();
             DgJuries.ItemsSource = InfoSecurityEntities.GetContext().Juries.ToList();
         }
+
+        private void MIAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MIList_Click(object sender, RoutedEventArgs e)
+        {
+            ConnectHelper.frame.Navigate(new PageJuriesList());
+        }
     }
 }

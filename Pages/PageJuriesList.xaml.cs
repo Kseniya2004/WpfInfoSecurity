@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,19 +19,22 @@ using WpfInfoSecurity.Classes;
 namespace WpfInfoSecurity.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для PageMembers.xaml
+    /// Логика взаимодействия для PageJuriesList.xaml
     /// </summary>
-    public partial class PageMembers : Page
+    public partial class PageJuriesList : Page
     {
-        public PageMembers()
+        public PageJuriesList()
         {
             InitializeComponent();
-            DgMembers.ItemsSource = InfoSecurityEntities.GetContext().Members.ToList();
+            LViewJuries.ItemsSource = InfoSecurityEntities.GetContext().Juries.ToList();
+
+            
+            
         }
 
-        private void MIList_Click(object sender, RoutedEventArgs e)
+        private void MIGrid_Click(object sender, RoutedEventArgs e)
         {
-            ConnectHelper.frame.Navigate(new PageMembersList());
+            ConnectHelper.frame.Navigate(new PageJuries());
         }
     }
 }

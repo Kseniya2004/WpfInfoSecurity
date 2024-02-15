@@ -10,14 +10,25 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="5*"/>
-        </Grid.RowDefinitions>        
-        <DataGrid Name="DgEvents" Grid.Row="1"
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Margin="5" Width="120"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="фильтр" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="По направлению:" />
+            <ComboBox Name="CmbDirections" Height="30"
+                      SelectionChanged="CmbDirections_SelectionChanged"/>
+        </StackPanel>
+        <DataGrid Name="DgEvents" 
+                  Grid.Row="1" Grid.Column="1"
                   IsReadOnly="True"
                   AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" Width="4*"
+                <DataGridTextColumn Header="Название" Width="3.5*"
                                         Binding="{Binding EventName}"/>
                 <DataGridTextColumn Header="Направление" Width="*"
                         Binding="{Binding Directions.Name}"/>

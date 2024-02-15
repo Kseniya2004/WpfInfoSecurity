@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfInfoSecurity"
         mc:Ignorable="d"
-        Title="Главная" Height="450" Width="800">
+        Title="Главная" Height="500" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

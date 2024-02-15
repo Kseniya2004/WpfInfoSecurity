@@ -6,17 +6,18 @@
       xmlns:local="clr-namespace:WpfInfoSecurity.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Жюри">
+      Title="Список Жюри">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-        <Menu Height="25" VerticalAlignment="Top">
-            <MenuItem Header="Добавить"/>
-            <MenuItem Header="Редактировать"/>
-            <MenuItem Header="Удалить"/>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Добавить" Name="MIAdd"
+                      Click="MIAdd_Click"/>
+            <MenuItem Header="Список" Name="MIList"
+                      Click="MIList_Click"/>
         </Menu>
         <DataGrid Name="DgJuries" Grid.Row="1"
           IsReadOnly="True"

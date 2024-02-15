@@ -13,6 +13,10 @@
             <RowDefinition Height="0.5*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Список" Name="MIList"
+              Click="MIList_Click"/>
+        </Menu>
         <DataGrid Name="DgMembers" Grid.Row="1"
           IsReadOnly="True"
           AutoGenerateColumns="False">
