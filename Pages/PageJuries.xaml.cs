@@ -29,7 +29,7 @@ namespace WpfInfoSecurity.Pages
 
         private void MIAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            ConnectHelper.frame.Navigate(new PageAddJuries());
         }
 
         private void MIList_Click(object sender, RoutedEventArgs e)

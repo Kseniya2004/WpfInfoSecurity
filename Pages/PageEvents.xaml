@@ -13,15 +13,22 @@
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Vertical" Margin="5" Width="120"
+        <StackPanel Orientation="Vertical" Margin="5" Width="200"
                     HorizontalAlignment="Center">
-            <TextBlock Text="фильтр" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+            <TextBlock Text="фильтры" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
             <TextBlock Text="По направлению:" />
             <ComboBox Name="CmbDirections" Height="30"
                       SelectionChanged="CmbDirections_SelectionChanged"/>
+            <TextBlock Text="По дате:" Margin="0 10 0 0"/>
+            <Calendar  Name="CFilter"
+                       SelectionMode="MultipleRange"
+                       SelectedDatesChanged="CFilter_SelectedDatesChanged"/>
+            <Button Content="Сбросить" Height="30" Margin="0 10 0 0"                    
+                Name="BtnReset"
+                Click="BtnReset_Click"/>
         </StackPanel>
         <DataGrid Name="DgEvents" 
                   Grid.Row="1" Grid.Column="1"
@@ -33,7 +40,7 @@
                 <DataGridTextColumn Header="Направление" Width="*"
                         Binding="{Binding Directions.Name}"/>
                 <DataGridTextColumn  Header="Дата" Width="*"
-                                        Binding="{Binding Date, StringFormat='dd.mm.yyyy'}"/>           
+                                        Binding="{Binding Date, StringFormat='dd.MM.yyyy'}"/>           
                 <DataGridTextColumn Header="Город" Width="*"
                                         Binding="{Binding Cities.Name}"/>
             </DataGrid.Columns>

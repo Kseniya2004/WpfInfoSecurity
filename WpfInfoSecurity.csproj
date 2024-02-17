@@ -67,6 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\PageAddJuries.xaml.cs">
+      <DependentUpon>PageAddJuries.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PageJuries.xaml.cs">
       <DependentUpon>PageJuries.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\PageAddJuries.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PageEvents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -375,6 +382,7 @@
     <Resource Include="Assets\Organizers\foto7.jpg" />
     <Resource Include="Assets\Organizers\foto8.jpg" />
     <Resource Include="Assets\Organizers\foto9.jpg" />
+    <Resource Include="Assets\NoFoto.png" />
     <Content Include="Classes\ModelInfo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelInfo.edmx</DependentUpon>

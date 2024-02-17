@@ -26,7 +26,6 @@ namespace WpfInfoSecurity.Windows
             InitializeComponent();
             ConnectHelper.frame = frmOrganizer;
             frmOrganizer.Navigate(new PageOrganizer(id));
-
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

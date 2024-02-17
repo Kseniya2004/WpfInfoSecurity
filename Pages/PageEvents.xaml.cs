@@ -46,5 +46,17 @@ namespace WpfInfoSecurity.Pages
                 DgEvents.ItemsSource = InfoSecurityEntities.GetContext().Events.Where(x => x.DirectionId == id).ToList();
 
         }
+
+        private void CFilter_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var firstDay = CFilter.SelectedDates.First();
+            var lastDay = CFilter.SelectedDates.Last();
+            DgEvents.ItemsSource = InfoSecurityEntities.GetContext().Events.Where(x => x.Date > firstDay && x.Date < lastDay).ToList();
+        }
+
+        private void BtnReset_Click(object sender, RoutedEventArgs e)
+        {
+            DgEvents.ItemsSource = InfoSecurityEntities.GetContext().Events.ToList();
+        }
     }
 }

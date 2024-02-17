@@ -73,7 +73,7 @@ namespace WpfInfoSecurity.Windows
                 {
                     if (organizers != null)
                     {
-                        MessageBox.Show("Добро пожаловать организатор");                       
+                        MessageBox.Show("Добро пожаловать, " + organizers.Fio + "!", "Успешная авторизация!");                       
                         WindowOranizer windowOranizer = new WindowOranizer(organizers.Id);
                         windowOranizer.Show();
                         Close();
@@ -81,28 +81,28 @@ namespace WpfInfoSecurity.Windows
                     }
                     else if (members != null)
                     {
-                        MessageBox.Show("Добро пожаловать участник");
+                        MessageBox.Show("Добро пожаловать, " + members.Fio + "!", "Успешная авторизация!");
                         MainWindow mainWindow = new MainWindow();
                         mainWindow.Show();
                         Hide();
                     }
                     else if (moderators != null)
                     {
-                        MessageBox.Show("Добро пожаловать модератор");
+                        MessageBox.Show("Добро пожаловать, " + moderators.Fio + "!", "Успешная авторизация!");
                         MainWindow mainWindow = new MainWindow();
                         mainWindow.Show();
                         Hide();
                     }
                     else if (juries != null)
                     {
-                        MessageBox.Show("Добро пожаловать жюри" + juries);
+                        MessageBox.Show("Добро пожаловать, " + juries.Fio + "!", "Успешная авторизация!");
                         MainWindow mainWindow = new MainWindow();
                         mainWindow.Show();
                         Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Пользователь не авторизован");
+                        MessageBox.Show("Пользователь не авторизован!");
                         failCount++;
                         FillContent();
                     }
@@ -110,7 +110,7 @@ namespace WpfInfoSecurity.Windows
                 }
                 else
                 {
-                    MessageBox.Show("Captcha не пройдена");                 
+                    MessageBox.Show("Captcha не пройдена!");                 
                     failCount++;
                     FillContent();
                 }
@@ -119,9 +119,8 @@ namespace WpfInfoSecurity.Windows
                 if (failCount >= 3)
                 {
                     timer.Start();
-                    MessageBox.Show("Превышен лимит поыток");
+                    MessageBox.Show("Превышен лимит поыток!");
                     BtnEnter.IsEnabled = true;
-                    BtnEnter.Background = new SolidColorBrush(Colors.Gray);
                 }
                 
 
