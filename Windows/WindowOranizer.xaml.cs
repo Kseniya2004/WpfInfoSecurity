@@ -21,16 +21,18 @@ namespace WpfInfoSecurity.Windows
     /// </summary>
     public partial class WindowOranizer : Window
     {
+        int NumberId;
         public WindowOranizer(int id)
         {
             InitializeComponent();
             ConnectHelper.frame = frmOrganizer;
+            NumberId = id;
             frmOrganizer.Navigate(new PageOrganizer(id));
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            frmOrganizer.GoBack();
+            frmOrganizer.Navigate(new PageOrganizer(NumberId));
         }
 
         private void frmOrganizer_ContentRendered(object sender, EventArgs e)

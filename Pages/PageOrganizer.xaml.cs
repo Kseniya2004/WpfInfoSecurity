@@ -21,9 +21,11 @@ namespace WpfInfoSecurity.Pages
     /// </summary>
     public partial class PageOrganizer : Page
     {
+        int NumberId;
         public PageOrganizer(int id)
         {
             InitializeComponent();
+            NumberId = id;
             Organizers organizers = null;
             organizers = InfoSecurityEntities.GetContext().Organizers.Where(x => x.Id.ToString() == id.ToString()).FirstOrDefault();
             var gender = "";
@@ -50,7 +52,7 @@ namespace WpfInfoSecurity.Pages
 
         private void BtnProfile_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Profile");
+            ConnectHelper.frame.Navigate(new PageProfile(NumberId));
         }
 
         private void BtnEvents_Click(object sender, RoutedEventArgs e)

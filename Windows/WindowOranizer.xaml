@@ -16,7 +16,7 @@
             VerticalAlignment="Center"
             HorizontalAlignment="Center">
             <TextBlock Text="{Binding ElementName=frmOrganizer, Path=Content.Title}" FontSize="24" FontWeight="Bold"/>
-            <Button Content="Назад" Width="80" 
+            <Button Content="Главная" Width="80" 
                     Name="BtnBack" Click="BtnBack_Click" 
                     Margin="30 0 0 0"
                     Style="{StaticResource RoundButton}"/>
