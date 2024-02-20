@@ -4,16 +4,19 @@
              xmlns:local="clr-namespace:WpfInfoSecurity"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--Стили для текстовых блоков-->
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="14"/>            
         </Style>
+        <!--Стили для текстовых полей-->
         <Style TargetType="TextBox">
             <Setter Property="Height" Value="30"/>
         </Style>
+        <!--общие стили для кнопок-->
         <Style TargetType="Button">
             <Setter Property="Background" Value="White"/>
         </Style>
-
+        <!--стили для функциональных кнопок-->
         <Style x:Key="RoundButton" TargetType="Button">
             <Setter Property="Background" Value="#BAF1EF"/>
             <Setter Property="Padding" Value="10"/>
@@ -27,7 +30,6 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-        </Style>
-        
+        </Style>        
     </Application.Resources>
 </Application>

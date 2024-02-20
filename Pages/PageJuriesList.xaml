@@ -44,6 +44,7 @@
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
 
                         <Image Width="100" Grid.RowSpan="9" Grid.Column="0"
@@ -55,15 +56,15 @@
                             <TextBlock Text=". " FontWeight="Bold" Margin="0 5"/>
                             <TextBlock Text="{Binding Fio}" FontWeight="Bold" Margin="0 5"/>                            
                         </StackPanel>
-                        <TextBlock Text="{Binding Gender.Name, StringFormat=Пол: {0}}" Grid.Row="2" Grid.Column="1"/>
-                        <TextBlock Text="{Binding Email, StringFormat=Почта: {0}}" Grid.Row="3" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Gender.Name, StringFormat=Пол: {0}}" Grid.Row="1" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Email, StringFormat=Почта: {0}}" Grid.Row="2" Grid.Column="1"/>
                         <TextBlock Text="{Binding Birthday, StringFormat='Дата рождения: dd.mm.yyyy'}" 
-                                    Grid.Row="4" Grid.Column="1"/>
-                        <TextBlock Text="{Binding Country.Name, StringFormat=Страна: {0}}" Grid.Row="5" Grid.Column="1"/>
-                        <TextBlock Text="{Binding Phone, StringFormat=Номер: +{0}}" Grid.Row="6" Grid.Column="1"/>
-                        <TextBlock Text="{Binding Directions.Name, StringFormat=Направление: {0}}" Grid.Row="7" Grid.Column="1"/>
-                        <TextBlock Text="{Binding Events.EventName, StringFormat=Почта: {0}}" Grid.Row="8" Grid.Column="1"/>
-                        <TextBlock Text="{Binding Password, StringFormat=Пароль: {0}}" Grid.Row="9" Grid.Column="1"/>
+                                    Grid.Row="3" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Country.Name, StringFormat=Страна: {0}}" Grid.Row="4" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Phone, StringFormat=Номер: +{0}}" Grid.Row="5" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Directions.Name, StringFormat=Направление: {0}}" Grid.Row="6" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Events.EventName, StringFormat=Мероприятие: {0}}" Grid.Row="7" Grid.Column="1"/>
+                        <TextBlock Text="{Binding Password, StringFormat=Пароль: {0}}" Grid.Row="8" Grid.Column="1"/>
                     </Grid>
                     </Border>
                 </DataTemplate>
